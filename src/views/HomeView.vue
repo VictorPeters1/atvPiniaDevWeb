@@ -1,9 +1,13 @@
 <script setup>
+
 import { useBooksStore } from '@/stores/books';
 import { useCartStore } from '@/stores/cart';
 
+
+const booksStore = useBooksStore();
 const cartStore = useCartStore();
-const bookstore = useBooksStore();
+
+
 </script>
 
 <template>
@@ -43,18 +47,15 @@ const bookstore = useBooksStore();
 
     <section class="books">
       <ul>
-        <li v-for="book in bookstore.books" :key="book.id" class="book">
-          <img :src="book.cover"  alt={{book.title}} />
-          <h2>{{ book.title }} </h2>
-          <p  class="book-author">{{ book.author }}</p>
+        <li v-for="book in booksStore.books" :key="book.id" class="book">
+          <img :src="book.cover" :alt=book.title />
+          <h2 >{{book.title}}</h2>
+          <p  class="book-author">{{book.author}}</p>
           <span  class="price-and-like"
-            ><p  class="book-price">{{ book.price }}</p>
+            ><p  class="book-price">R$ {{ book.price }}</p>
             <span  class="mdi mdi-heart-outline"></span></span
-          ><button @click="cartStore.addBook(book)" >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
+          ><button @click=" cartStore.addBook(book)" > <span  class="mdi mdi-cart"></span>Compra </button>
         </li>
-
       </ul>
     </section>
   </main>

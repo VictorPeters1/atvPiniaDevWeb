@@ -1,8 +1,7 @@
 import { defineStore } from 'pinia'
-import {ref} from 'vue'
-
+import { ref } from 'vue';
 export const useBooksStore = defineStore('books', () => {
-  const books = ref([
+    const books = ref([
     {
       id: 1,
       title: 'Comigo na livraria',
@@ -59,8 +58,24 @@ export const useBooksStore = defineStore('books', () => {
       price: 15.81,
       author: 'Cecília Meireles',
     },
+
+    {
+      id: 9,
+      title: 'Timeless',
+      cover: '/covers/timeless.png',
+      price: 48.63,
+      author: 'Marvel Comics',
+    },
+
+    {
+      id: 10,
+      title: 'Jojo Steel Ball Run ',
+      cover: '/covers/steel-ball-run.png',
+      price: 54.90,
+      author: 'Hirohiko Araki',
+    },
   ]);
 
-  return { books}
-})
 
+  return { books }
+})

@@ -9,16 +9,11 @@ export const useCartStore = defineStore('cart', () => {
   });
 
   function addBook(book) {
-    const existBook = cart.value.items.find(item => item.id === book.id);
+    this.cart.items.push(book)
+    this.cart.total += book.price
+    console.log(this.cart)
 
-    if (existBook) {
-      console.log("Este item ja está no carrinho!")
-    }
-    else
+
   }
-
-  return {
-    cart, addBook
-  };
+  return {cart, addBook};
 });
-
