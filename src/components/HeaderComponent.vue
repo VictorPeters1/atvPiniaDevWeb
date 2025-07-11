@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router'
 <header>
     <nav>
       <h1>
-        <a href="#">
+        <a href="../views/HomeView.vue">
           IFbooks
           <span class="logo-title"> Apreço a livros </span>
         </a>

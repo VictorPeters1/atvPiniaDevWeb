@@ -1,13 +1,15 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue';
+import { ref } from 'vue'
+
 export const useBooksStore = defineStore('books', () => {
-    const books = ref([
+  const books = ref([
     {
       id: 1,
       title: 'Comigo na livraria',
       cover: '/covers/comigo-na-livraria.png',
       price: 23.24,
       author: 'Martha Medeiros',
+      quantity: 0,
     },
     {
       id: 2,
@@ -15,6 +17,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/quincas-borba.png',
       price: 23.24,
       author: 'Machado de Assis',
+      quantity: 0,
     },
     {
       id: 3,
@@ -22,6 +25,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/a-livraria.png',
       price: 13.94,
       author: 'Penelope Fitzgerald',
+      quantity: 0,
     },
     {
       id: 4,
@@ -29,6 +33,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/a-hora-da-estrela.png',
       price: 16.84,
       author: 'Clarice Lispector',
+      quantity: 0,
     },
     {
       id: 5,
@@ -36,6 +41,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/o-alienista.png',
       price: 266.92,
       author: 'Machado de Assis',
+      quantity: 0,
     },
     {
       id: 6,
@@ -43,6 +49,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/mar-morto.png',
       price: 13.95,
       author: 'Jorge Amado',
+      quantity: 0,
     },
     {
       id: 7,
@@ -50,6 +57,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/grande-sertao-veredas.png',
       price: 26.04,
       author: 'Guimarães Rosa',
+      quantity: 0,
     },
     {
       id: 8,
@@ -57,25 +65,9 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/flor-de-poema.png',
       price: 15.81,
       author: 'Cecília Meireles',
+      quantity: 0,
     },
-
-    {
-      id: 9,
-      title: 'Timeless',
-      cover: '/covers/timeless.png',
-      price: 48.63,
-      author: 'Marvel Comics',
-    },
-
-    {
-      id: 10,
-      title: 'Jojo Steel Ball Run ',
-      cover: '/covers/steel-ball-run.png',
-      price: 54.90,
-      author: 'Hirohiko Araki',
-    },
-  ]);
-
+  ])
 
   return { books }
 })
