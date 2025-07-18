@@ -3,27 +3,26 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-<header>
+  <header>
     <nav>
       <h1>
-        <a href="../views/HomeView.vue">
+        <router-link to="/">
           IFbooks
           <span class="logo-title"> Apreço a livros </span>
-        </a>
+        </router-link>
       </h1>
       <div class="search-wrapper">
         <input type="text" class="search" placeholder="Buscar..." />
       </div>
-      <ul>
-        <li>Termos</li>
-        <li>Equipe</li>
-        <li>Envio</li>
-        <li>Devoluções</li>
-      </ul>
+      <nav>
+        <router-link to="/termo">Termos</router-link>
+        <router-link to="/envio">Envios</router-link>
+        <router-link to="/equipe">Equipe</router-link>
+        <router-link to="/devolucao">Devoluções</router-link>
+      </nav>
       <ul class="icons">
         <li>
           <router-link to="/cart"><span class="mdi mdi-cart"></span></router-link>
-
         </li>
         <li><span class="mdi mdi-heart"></span></li>
         <li><span class="mdi mdi-account"></span></li>
@@ -44,7 +43,8 @@ header nav {
     font-size: 1.3rem;
     color: #000;
 
-    & a {
+    & a,
+    & .router-link {
       text-decoration: none;
       color: #000;
       display: flex;
@@ -107,3 +107,4 @@ header nav {
   }
 }
 </style>
+

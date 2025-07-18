@@ -5,7 +5,7 @@
 <template>
     <h1> Equipe </h1>
 
-    <p>Tomas Locatelli</p>
+    <p>Victor Peters</p>
 </template>
 <style scoped>
 
