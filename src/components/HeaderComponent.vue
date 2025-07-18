@@ -14,7 +14,7 @@ import { RouterLink } from 'vue-router'
       <div class="search-wrapper">
         <input type="text" class="search" placeholder="Buscar..." />
       </div>
-      <nav>
+      <nav class="menu-links">
         <router-link to="/termo">Termos</router-link>
         <router-link to="/envio">Envios</router-link>
         <router-link to="/equipe">Equipe</router-link>
@@ -43,8 +43,7 @@ header nav {
     font-size: 1.3rem;
     color: #000;
 
-    & a,
-    & .router-link {
+    & a {
       text-decoration: none;
       color: #000;
       display: flex;
@@ -72,19 +71,15 @@ header nav {
     padding: 5px;
   }
 
-  & ul {
+  & .icons {
     display: flex;
   }
 
-  & ul li {
+  & .icons li {
     list-style: none;
     margin: 0 10px;
-    font-size: 1rem;
-  }
-
-  & .icons li {
-    color: #27ae60;
     font-size: 1.3rem;
+    color: #27ae60;
   }
 
   & .search-wrapper {
@@ -92,7 +87,7 @@ header nav {
   }
 
   & .search-wrapper::before {
-    content: '󰍉'; /* Code glyph para mdi-magnify */
+    content: '󰍉';
     font-family: 'Material Design Icons';
     font-size: 1.2rem;
     position: absolute;
@@ -105,6 +100,29 @@ header nav {
   & .search {
     padding-right: 2rem;
   }
+
+  & .menu-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  & .menu-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+
+  & .menu-links a:hover {
+    color: #27ae60;
+  }
+
+  & .menu-links .router-link-active {
+    color: #27ae60;
+    font-weight: 600;
+  }
 }
+
 </style>
 
